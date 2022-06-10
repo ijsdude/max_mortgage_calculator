@@ -1,0 +1,92 @@
+{
+    "error": "Form validation failed",
+    "violations": {
+        "errors": [],
+        "children": {
+            "nhg": {
+                "errors": []
+            },
+            "privateLeaseAmount": {
+                "errors": []
+            },
+            "privateLeaseDuration": {
+                "errors": []
+            },
+            "privateLeaseBindingOfferDate": {
+                "errors": []
+            },
+            "duration": {
+                "errors": []
+            },
+            "percentage": {
+                "errors": [
+                    {
+                        "message": "This value should not be blank.",
+                        "cause": {}
+                    }
+                ]
+            },
+            "rateFixation": {
+                "errors": []
+            },
+            "notDeductible": {
+                "errors": []
+            },
+            "groundRent": {
+                "errors": []
+            },
+            "person1": {
+                "errors": [],
+                "children": {
+                    "income": {
+                        "errors": []
+                    },
+                    "age": {
+                        "errors": []
+                    },
+                    "dateOfBirth": {
+                        "errors": []
+                    },
+                    "alimony": {
+                        "errors": []
+                    },
+                    "loans": {
+                        "errors": []
+                    },
+                    "studentLoans": {
+                        "errors": []
+                    },
+                    "studentLoanStartDate": {
+                        "errors": []
+                    }
+                }
+            },
+            "person2": {
+                "errors": [],
+                "children": {
+                    "income": {
+                        "errors": []
+                    },
+                    "age": {
+                        "errors": []
+                    },
+                    "dateOfBirth": {
+                        "errors": []
+                    },
+                    "alimony": {
+                        "errors": []
+                    },
+                    "loans": {
+                        "errors": []
+                    },
+                    "studentLoans": {
+                        "errors": []
+                    },
+                    "studentLoanStartDate": {
+                        "errors": []
+                    }
+                }
+            }
+        }
+    }
+}

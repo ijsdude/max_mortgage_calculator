@@ -1,0 +1,19 @@
+{
+    "maximumMortgage": {
+        "maximumMortgage": {
+            "data": {
+                "result": 18710.68477757552,
+                "calculationValues": {
+                    "totalReferenceIncome": 5000,
+                    "firstGrossPayment": 64.58
+                }
+            },
+            "meta": {
+                "deprecated": {
+                    "age": "DEPRECATED: age is deprecated, use dateOfBirth instead",
+                    "old_student_loan_regulation": "DEPRECATED: old_student_loan_regulation, use person[x][studentLoanStartDate] instead."
+                }
+            }
+        }
+    }
+}
