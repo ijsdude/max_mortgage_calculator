@@ -1,0 +1,103 @@
+openapi: 3.0.0
+
+info:
+    title: Maximum mortgage calculator
+    description: Calculate maximum mortgage
+    version: '1.0'
+
+components:
+    schemas:
+        MaximumMortgageRequestBody:
+            type: object
+            required:
+                - percentage
+                - person
+            properties:
+                percentage:
+                    type: number
+                    example: 1.5001
+                person:
+                    type: object
+                    properties:
+                        income:
+                            type: number
+                            example: 50000
+
+        MaximumMortgageResponseBody:
+            type: object
+            properties:
+                maximumMortgage:
+                    type: object
+                    properties:
+                        data:
+                            $ref: '#/components/schemas/maximumMortgageData'
+                        meta:
+                            $ref: '#/components/schemas/maximumMortgageMeta'
+
+        maximumMortgageData:
+            type: object
+            properties:
+                result:
+                    type: number
+                    example: 241428.19067839382
+                calculationValues:
+                    type: object
+                    properties:
+                        totalReferenceIncome:
+                            type: number
+                            example: 50000
+                        firstGrossPayment:
+                            type: number
+                            example: 833.33
+
+        maximumMortgageMeta:
+            type: object
+            properties:
+                deprecated:
+                    type: object
+                    properties:
+                        age:
+                            type: string
+                            example: "DEPRECATED: age is deprecated, use dateOfBirth instead"
+                        old_student_loan_regulation:
+                            type: string
+                            example: "DEPRECATED: old_student_loan_regulation, use person[x][studentLoanStartDate] instead."
+
+
+        Errors:
+            type: object
+            properties:
+                error:
+                    type: object
+                    properties:
+                        code:
+                            type: integer
+                            format: int32
+                        message:
+                            type: string
+
+paths:
+    /calculate-by-income:
+        post:
+            summary: Calculate maximum mortgage
+            description: Calculate maximum mortgage
+            requestBody:
+                description: Input values to calculate maximum mortgage
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/MaximumMortgageRequestBody'
+            responses:
+                '200':
+                    description: Stream was added successfully
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/MaximumMortgageResponseBody'
+                '400':
+                    description: Validation of input has failed
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/Errors'
