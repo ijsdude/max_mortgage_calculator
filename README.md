@@ -7,7 +7,7 @@ A simple application that can calculate your maximum mortgage based on some user
 - PHP: 8.1
 - Symfony: 6.1.0
 - Using the default docker configuration provided by Symfony
-  - This provides symfony/flex functionality to automatically add docker configuration when a new symfony/flex recipy is installed
+  - This provides symfony/flex functionality to automatically add docker configuration when a new symfony/flex recipe is installed
 
 ## Getting Started
 To get this application to run on your local system follow the steps below:
