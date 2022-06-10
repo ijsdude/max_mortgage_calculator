@@ -22,3 +22,13 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+    App\Connector\HypotheekBondConnector:
+        arguments:
+            $apiKey: '%env(API_KEY)%'
+
+when@test:
+    services:
+        _defaults:
+            public: true
+
+        Symfony\Contracts\HttpClient\HttpClientInterface: ~
