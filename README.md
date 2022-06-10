@@ -19,7 +19,7 @@ To get this application to run on your local system follow the steps below:
    1. To be able to make requests to the API you need an API token
       1. Create a new `.env.local` in your root directory by copying the `.env` file. Now fill in the value at `API_KEY` to be able to make API requests.
    2. See next chapter `Api Documentation`, to find out what endpoints are available
-4. Run `docker-compose down --remove-orphans` to stop the Docker containers.
+4. Run `docker-compose down --remove-orphans` to stop the Docker containers
 
 ## Api documentation
 The API documentation can be found in the `/docs` directory in the root of this project. In here you will find a `swagger.yml` file. To open this go to https://editor.swagger.io/ and past in the code.
